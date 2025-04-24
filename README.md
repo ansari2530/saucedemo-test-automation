@@ -123,13 +123,16 @@ Create new file `.env` based on `.env.example` file. Update values for `.env` be
 
  - Look for the created job into the Dashboard.
 
- - After tapping over it, there will be three choice parameter visible i.e `tag`, `browser` & `mode`.
+ - navigate to configure & update the pipeline script with the actual project path under `dir`
+   e.g. `dir('/Users/<foldername1>/<foldername2>/<foldername3>/saucedemo-test-automation')`
+
+ - After tapping over it, select `build with parameters` choose the parameters value as i.e `tag`, `browser` & `mode`.
     e.g.
-    - selection of `regression`, `chromium` & `headless` : Execute all the tests in UI chrome.
-    - selection of `regression`, `chromium` & `headed` : Execute all the tests in headless chrome.
+    - selection of `regression`, `chromium` & `headless` : Execute all the tests in headless chrome.
+    - selection of `regression`, `chromium` & `headed` : Execute all the tests in UI headed chrome.
     - selection of `homepage`, `chromium` & `headless` : Execute all the homepage tests in headless chrome.
     - selection of `cartpage`, `chromium` & `headless` : Execute all the cartpage tests in headless chrome.
-    - selection of `loginpage`, `chromium` & `headless` : Execute all the cartpage tests in headed chrome.
+    - selection of `loginpage`, `chromium` & `headless` : Execute all the cartpage tests in headless chrome.
     - follow the same for firefox headed/headless mode as well.
 
 
