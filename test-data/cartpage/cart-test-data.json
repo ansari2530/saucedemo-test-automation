@@ -1,0 +1,20 @@
+{
+
+    "errorMessages" : {
+        "firstName" : "Error: First Name is required",
+        "lastName" : "Error: Last Name is required",
+        "postalCode" : "Error: Postal Code is required"
+    },
+    
+    "assertionData": {
+        "firstName": "Demo",
+        "lastName": "checkout",
+        "postalCode": "12345"
+    },
+
+    "successConfirmMessage" : {
+        "complete" : "Checkout: Complete!",
+        "thankYou" : "Thank you for your order!"
+    }
+    
+}

@@ -1,0 +1,4 @@
+USERNAME=standard_user
+PASSWORD=secret_sauce
+LOCKED_USER=locked_out_user
+NON_EXISTING_USER=locked_out_user

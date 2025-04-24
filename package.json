@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "playwright": "^1.51.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.1"
+  },
+  "scripts": {
+    "regression-headed": "npx playwright test --grep @regression --headed",
+    "regression-headless": "npx playwright test --grep @regression",
+    "homepage" : "npx playwright test --grep @homepage",
+    "cartpage" : "npx playwright test --grep @cartpage",
+    "loginpage" : "npx playwright test --grep @loginpage"
+
+  }
+}
