@@ -4,22 +4,22 @@ import { logger } from '../utils/reporter-utility';
 export class CartPage {
 
     constructor(public page: Page,
-        readonly btn_checkout: Locator = page.locator("#checkout"),
-        readonly txt_firstname: Locator = page.locator('[data-test="firstName"]'),
-        readonly txt_lastname: Locator = page.locator('[data-test="lastName"]'),
-        readonly txt_postalcode: Locator = page.locator('[data-test="postalCode"]'),
-        readonly btn_continue: Locator = page.locator('[data-test="continue"]'),
-        readonly btn_finish: Locator = page.locator('[data-test="finish"]'),
-        readonly txt_complete: Locator = page.locator("[class='title']"),
-        readonly txt_thankyou: Locator = page.locator("[class='complete-header']"),
-        readonly btn_backtohomepage: Locator = page.locator("#back-to-products"),
+        readonly btn_checkout: Locator = page.getByRole('button', { name: 'Checkout' }),
+        readonly txt_firstname: Locator = page.getByPlaceholder('First Name'),
+        readonly txt_lastname: Locator = page.getByPlaceholder('Last Name'),
+        readonly txt_postalcode: Locator = page.getByPlaceholder('Zip/Postal Code'),
+        readonly btn_continue: Locator = page.getByRole('button', { name: 'Continue' }),
+        readonly btn_finish: Locator = page.getByRole('button', { name: 'Finish' }),
+        readonly txt_complete: Locator = page.getByText("Checkout: Complete!"),
+        readonly txt_thankyou: Locator = page.getByText("Thank you for your order!"),
+        readonly btn_backtohomepage: Locator = page.getByRole('button', { name: 'Back Home' }),
         readonly txt_productTitle: Locator = page.locator('div.inventory_item_name'),
         readonly error_message: Locator = page.locator('[data-test="error"]'),
-        readonly btn_remove: Locator = page.locator('[data-test*="remove"]'),
+        readonly btn_remove: Locator = page.getByRole('button', { name: 'Remove' }),
         readonly txt_cartCount: Locator = page.locator('span.shopping_cart_badge'),
         readonly btn_continueShopping: Locator = page.getByRole('button', { name: 'Continue Shopping' }),
         readonly txt_productsHeading: Locator = page.locator("span.title"),
-        readonly btn_cancelOverview: Locator = page.locator('#cancel'),
+        readonly btn_cancelOverview: Locator = page.getByRole('button', { name: 'Cancel'}),
     ) {
     }
 

@@ -11,11 +11,11 @@ export class HomePage {
         readonly btn_addToCart: Locator = page.locator("button.btn_inventory"),
         readonly productName: Locator = page.locator('div.inventory_item_name'),
         readonly productPrice: Locator = page.locator('div.inventory_item_price'),
-        readonly btn_remove: Locator = page.locator('[data-test*="remove"]'),
+        readonly btn_remove: Locator = page.getByRole('button', { name: 'Remove' }),
         readonly txt_cartCount: Locator = page.locator('span.shopping_cart_badge'),
-        readonly btn_backToProducts: Locator = page.locator('#back-to-products'),
+        readonly btn_backToProducts: Locator = page.getByRole('button', { name: 'Back to products' }),
         readonly txt_productTitleFromPdp: Locator = page.locator('div.inventory_details_name'),
-        readonly btn_menu: Locator = page.locator('#react-burger-menu-btn'),
+        readonly btn_menu: Locator = page.getByRole('button', { name: 'Open Menu' }),
         readonly btn_logout: Locator = page.locator('#logout_sidebar_link')
     ) { }
 

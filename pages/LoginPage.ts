@@ -5,9 +5,9 @@ import { logger } from '../utils/reporter-utility';
 export class LoginPage {
 
     constructor(public page: Page,
-        readonly txt_username: Locator = page.locator('[data-test="username"]'),
-        readonly txt_password: Locator = page.locator('[data-test="password"]'),
-        readonly btn_login: Locator = page.locator('[data-test="login-button"]'),
+        readonly txt_username: Locator = page.getByPlaceholder('Username'),
+        readonly txt_password: Locator = page.getByPlaceholder('Password'),
+        readonly btn_login: Locator = page.getByText('Login'),
         readonly error_message: Locator = page.locator('[data-test="error"]')
     ) {
     }
